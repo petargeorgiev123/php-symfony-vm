@@ -1,0 +1,13 @@
+- name: Install nano, git, etc
+  package: name={{ item }} state=present
+  with_items:
+     - git
+     - nano
+#     - gcc
+#     - kernel-devel
+#     - wget
+#     - vim
+#     - man
+#     - unzip
+#     - git
+#     - sqlite

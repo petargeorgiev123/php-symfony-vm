@@ -1,0 +1,17 @@
+- name: install mysql server
+  apt: name=mysql-server state=latest
+
+- name: install python mysql dependencies
+  apt: name=python-mysqldb state=present
+
+- name: create databases
+  mysql_db: name={{ item.db_name }}
+  with_items: '{{ apps }}'
+
+- name: create database users
+  mysql_user:
+    name: "{{ item.db_user }}"
+    password: "{{ item.db_password }}"
+    priv: '{{ item.db_name }}.*:ALL'
+    state: present
+  with_items: '{{ apps }}'

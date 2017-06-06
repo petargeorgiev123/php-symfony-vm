@@ -1,0 +1,14 @@
+locale: en_US.UTF-8
+
+php:
+    version: 7.1
+
+apps:
+    - name: symfony
+      user: vagrant
+      group: vagrant
+      domain: symfony.dev
+      db_user: symfony
+      db_name: cueball
+      db_password: secret
+      type: symfony
