@@ -12,5 +12,5 @@
     - composer
     - nginx
 #    - postgresql
-    - mysql
     - symfony
+    - mysql

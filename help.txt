@@ -1,0 +1,5 @@
+etc hosts local
+127.0.0.1       symfony.dev     symfony
+
+hosts host machine
+192.168.33.151  symfony.dev

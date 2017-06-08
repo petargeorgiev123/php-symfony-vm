@@ -5,7 +5,8 @@
   apt: name=python-mysqldb state=present
 
 - name: create databases
-  mysql_db: name={{ item.db_name }}
+  mysql_db:
+    name: '{{ item.db_name }}'
   with_items: '{{ apps }}'
 
 - name: create database users

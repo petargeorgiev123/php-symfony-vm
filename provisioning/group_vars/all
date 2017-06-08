@@ -10,5 +10,5 @@ apps:
       domain: symfony.dev
       db_user: symfony
       db_name: cueball
-      db_password: secret
+      db_password: root
       type: symfony
